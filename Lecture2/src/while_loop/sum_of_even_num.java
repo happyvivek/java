@@ -31,6 +31,8 @@ public class sum_of_even_num {
 		}
 		
 		System.out.println(sum);
+		System.out.println(sum);
+		
 		
 
 

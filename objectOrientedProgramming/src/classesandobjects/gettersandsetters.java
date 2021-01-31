@@ -9,6 +9,8 @@ package classesandobjects;
 //Default-Class is visible only within the same package,u need to import the class explicitly in 2nd package if u want to use class in pkg 1
 //Public -Class is visible to all packages anywhere
 //Private-Can be access only within the same class(Even obj within same package can access using getters and setters function.
+//getters and setters function is public so can be accessed anywhere
+
 public class gettersandsetters {
 	
 	

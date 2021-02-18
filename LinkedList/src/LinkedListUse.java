@@ -1,4 +1,11 @@
-
+/*
+ * Make sure you have 2 imp things
+ * node.next,node.data,head
+ * head as reference variable of node type(or of node class)
+ * next as reference variable for type node Node<T> next
+ * Node<Integer> head = node1; //Initialize with first node reference variable
+ * head=head.next;
+ */
 public class LinkedListUse {
 
 	public static void main(String[] args) {

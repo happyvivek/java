@@ -8,6 +8,14 @@
  */
 public class LinkedListUse {
 
+	public static void print(Node<Integer> head) {
+		while(head != null) {
+			System.out.print(head.data+" ");
+			head= head.next;
+		}
+		System.out.println();
+	}
+	
 	public static void main(String[] args) {
 	
 		Node<Integer> node1 = new Node<>(10);
@@ -40,7 +48,10 @@ public class LinkedListUse {
 	  System.out.print(head.data+" ");
 	  head = head.next;
   }
-        
+  
+  //Calling print function
+  
+  print(head);
         
 	}
 

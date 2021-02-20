@@ -11,13 +11,7 @@ public class deleteNode {
 		System.out.println();
 	}
 	
-	/*
-	public static void delete(Node<Integer> head, int pos)
-	{
-		syste
-		
-	}
-	*/
+	
 	
 	public static Node<Integer> takeInput()
 	
@@ -56,34 +50,59 @@ public class deleteNode {
 	}
 	
 	
-	public static void delete(Node<Integer>head,int pos)
+	public static Node<Integer> delete(Node<Integer>head,int pos)
 	
 	{
 		int i = 0 ;
+		Node<Integer> previous = null;
+		Node<Integer> current = null;
+		Node<Integer> next = null;
+		Node<Integer> temp = null;
 		
-		while(i < pos - 1)
+		System.out.println("Printing input head:" +head);
+		System.out.println("Printing input head:" +head.next);
+		System.out.println("Printing ith elemnt:" +pos);
+		
+		if(pos == 0) {
+			temp=head.next;
+			head.next = null;
+			head=temp;
+			System.out.println("Printing ith elemnt:" +temp);
+			System.out.println("Printing ith elemnt:" +head);
+			
+			
+			//return head;
+		}	
+		
+		else {
+			temp=head;
+		while(i < pos)
 		{
+			
+			previous=head;
 			head=head.next;
 			System.out.println("progress address is: "+head+" ");
 			i++;
+			
+		
 		}
 		
-		Node<Integer> previous = head;
-		System.out.println("previous node next is: "+previous+" ");
+		current = head;
+		next=current.next;
 		
-			Node<Integer>current=previous.next;
-			Node<Integer>next = current.next;
-			System.out.println("current node next is: "+current+" ");
-			
-			previous.next=next;
-			System.out.println(current.next+ "node");
-			
-		//	i++;
-			
-			//System.out.println("previous address is: "+head+" ");	
+		System.out.println("previous address is: " +previous+" ");
+		System.out.println("current address is: " +current+" ");
+		System.out.println("next address is: " +next+" ");
+		
+		previous.next=next;
+		
+		System.out.println("Next address pd previous node is: " +previous.next+" ");
+	       
 		}
 		
-	
+		return temp;
+		
+	}
 		
 	
 	
@@ -92,9 +111,10 @@ public class deleteNode {
 	public static void main(String[] args) {
 		int pos;
 		Node<Integer> head = takeInput();
-		delete(head, 3);
+		head=delete(head, 1);
         //head = delete(head, 3);
         //head = delete(head, 0); 
+		System.out.println("Printing input head:" +head);
 		print(head);
 	
 
